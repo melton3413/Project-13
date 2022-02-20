@@ -5,7 +5,7 @@ GE-GT-Cyber-Project-13
 
 The files in this repository were used to configure the network depicted below.
 
-!(https://github.com/melton3413/Project-13/blob/main/Diagrams/GE-GT-UNIT-12.png)
+![](https://github.com/melton3413/Project-13/blob/main/Diagrams/GE-GT-UNIT-12.png)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _yml_ and _config_ file may be used to install only certain pieces of it, such as Filebeat.
 
