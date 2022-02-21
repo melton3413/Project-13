@@ -192,10 +192,10 @@ SSH into the control node and follow the steps below:
     systemd:
       name: filebeat
       enabled: yes
-...
+```
 
 [metricbeat-playbook.yml](https://github.com/melton3413/Project-13/blob/main/Ansible/metricbeat-playbook.yml)
-...bash
+```bash
 - name: Install metric beat
   hosts: webservers
   become: true
@@ -231,4 +231,4 @@ SSH into the control node and follow the steps below:
     systemd:
       name: metricbeat
       enabled: yes
-...
+```
