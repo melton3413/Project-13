@@ -53,7 +53,7 @@ Only the Jump Box machine can accept connections from the Internet. Access to th
 - Workstation IP Address - 99.x.x.x
 
 Machines within the network can only be accessed by the Jump Box.
-- The ELK Server is only accessible via Workstation IP Address on port 5601.
+- The ELK Server is only accessible by the Workstation IP Address on port 5601.
 
 A summary of the access policies in place can be found in the table below.
 
