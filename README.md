@@ -32,8 +32,8 @@ Load balancing ensures that the application will be highly avaialble, in additio
 - A jump box allows easier administration and protects virtual machines from exposure to the internet.
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the log files and system performance.
-- Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing.
-- Metricbeat collect metrics from the operating system and from services running on the server.
+- Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on the servers, Filebeat monitors the log files for specific locations, collects log events, and forwards them to System logs for indexing.
+- Metricbeat is a lightweight shipper to periodically collect metrics from the operating system and from services running on the server.  Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Docker metrics.
 
 The configuration details of each machine may be found below.
 <!-- Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table. -->
@@ -130,21 +130,24 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- Web 1 - 10.0.0.5
+- Web 1 - 10.0.0.6
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+- filebeat-7.4.0-amd64.deb
+- metricbeat-7.4.0-amd64.deb
 
 These Beats allow us to collect the following information from each machine:
-- _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
+- Filebeat is collecting web server syslog events and processes.
+- Metricbeat collects metrics and statistics such as CPU usage, Memory usage, and Disk I/O.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the _____ file to _____.
-- Update the _____ file to include...
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Copy the config file to Web VMs.
+- Update the /etc/ansible/hosts file to include the ELK Server IP Address.
+- Run the playbook, and navigate to http://[ELK_VM_Public_IP]:5601/app/kibana to check that the installation worked as expected.
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?_
