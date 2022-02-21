@@ -9,7 +9,9 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the _yml_ and _config_ file may be used to install only certain pieces of it, such as Filebeat.
 
+  - [ELK-install](https://github.com/melton3413/Project-13/blob/main/Ansible/install-elk.yml)
   - [Filebeat-playbook](https://github.com/melton3413/Project-13/blob/main/Ansible/filebeat-playbook.yml)
+  - [Metricbeat-playbook](https://github.com/melton3413/Project-13/blob/main/Ansible/metricbeat-playbook.yml)
 
 This document contains the following details:
 - Description of the Topology
@@ -47,19 +49,21 @@ The configuration details of each machine may be found below.
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Jump Box machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+- Workstation IP Address - 99.x.x.x
 
-Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+Machines within the network can only be accessed by the Jump Box.
+- The ELK Server is only accessible byt he Workstation IP Address - 99.x.x.x on port 5601.
 
 A summary of the access policies in place can be found in the table below.
 
-| Name     | Publicly Accessible | Allowed IP Addresses |
-|----------|---------------------|----------------------|
-| Jump Box | Yes/No              | 10.0.0.1 10.0.0.2    |
-|          |                     |                      |
-|          |                     |                      |
+| Name          | Publicly Accessible | Allowed IP Addresses |
+|---------------|---------------------|----------------------|
+| Jump Box      | Yes                 | 99.x.x.x.            |
+| Load Balancer | Yes                 | Open                 |
+| Web 1         | No                  | 10.0.0.4             |
+| Web 2         | No                  | 10.0.0.4             |
+| ELK           | No                  | 10.0.0.4             |
 
 ### Elk Configuration
 
