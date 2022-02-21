@@ -155,7 +155,7 @@ SSH into the control node and follow the steps below:
 - _How do I specify which machine to install the ELK server on versus which to install Filebeat on?_  Update the hosts file to add/remove IP addresses for different servers.
 - _Which URL do you navigate to in order to check that the ELK server is running?_  http://[ELK_VM_Public_IP]:5601/app/kibana
 
-- [filebeat-playbook.yml](https://github.com/melton3413/Project-13/blob/main/Ansible/filebeat-playbook.yml)
+[filebeat-playbook.yml](https://github.com/melton3413/Project-13/blob/main/Ansible/filebeat-playbook.yml)
 ```bash
 - name: Installing and Launch Filebeat
   hosts: webservers
@@ -194,7 +194,7 @@ SSH into the control node and follow the steps below:
       enabled: yes
 ...
 
-- [metricbeat-playbook.yml](https://github.com/melton3413/Project-13/blob/main/Ansible/metricbeat-playbook.yml)
+[metricbeat-playbook.yml](https://github.com/melton3413/Project-13/blob/main/Ansible/metricbeat-playbook.yml)
 ...bash
 - name: Install metric beat
   hosts: webservers
