@@ -70,10 +70,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
 - _TODO: What is the main advantage of automating configuration with Ansible?_
 
-The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+The [ELK-install](https://github.com/melton3413/Project-13/blob/main/Ansible/install-elk.yml) playbook implements the following tasks:
+
+- Install docker.io
+- Install python-pip
+- Install docker python module
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
