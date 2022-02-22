@@ -26,7 +26,7 @@ This document contains the following details:
 
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
-Load balancing ensures that the application will be highly avaialble, in addition to restricting access to the network.
+Load balancing ensures that the application will be highly available, in addition to restricting access to the network.
 - Load balancers add resiliency by rerouting live traffic from one server to another if a server falls prey to DDoS attacks or otherwise becomes unavailable. In this way, load balancers help to eliminate single points of failure, reduce the attack surface, and make it harder to exhaust resources and saturate links.
 
 - A jump box allows easier administration and protects virtual machines from exposure to the internet.
